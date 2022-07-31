@@ -7,7 +7,11 @@ import 'package:intl/intl.dart';
 import 'package:new_moon_app/cleandersScreen/hijri.dart';
 import 'package:new_moon_app/items/calenderidtem.dart';
 import 'package:new_moon_app/items/current_ecteran.dart';
+import 'package:new_moon_app/items/currentecterantext.dart';
+import 'package:new_moon_app/items/ekteran_item.dart';
 import 'package:new_moon_app/items/hijri.dart';
+import 'package:new_moon_app/screens/bnb_screens/all_najom.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 
 import '../components/const.dart';
@@ -26,6 +30,17 @@ class _CleandersState extends State<Cleanders> {
   var todayFormatter = DateFormat.EEEE("ar");
 
   var date = DateFormat.yMMMd("ar");
+  Future<String> getText() async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.get('ecteran');
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    getText();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -70,7 +85,7 @@ class _CleandersState extends State<Cleanders> {
                 child: Padding(
                     padding: const EdgeInsets.all(10),
                     child: FutureBuilder<String>(
-                      // future: getText(), // async work
+                      future: getText(), // async work
                       builder: (BuildContext context,
                           AsyncSnapshot<String> snapshot) {
                         switch (snapshot.connectionState) {
@@ -81,9 +96,7 @@ class _CleandersState extends State<Cleanders> {
                               return Text('Error: ${snapshot.error}');
                             else
                               return Text(
-                                // ' ${snapshot.data}',
-                                "من الشهر الجاري سيقترن القمر مع نجم الثريا، مشيرا الى ان هذا الاقتران له علاقة زمنية مع الاحوال الجوية.",
-
+                                ' ${snapshot.data}',
                                 style: TextStyle(
                                   height: 1.5,
                                   color: Colors.white70,
@@ -95,8 +108,7 @@ class _CleandersState extends State<Cleanders> {
                               );
                         }
                       },
-                    )
-                    ),
+                    )),
               ),
             ),
             SizedBox(
@@ -140,21 +152,16 @@ class _CleandersState extends State<Cleanders> {
                       '${_today.toFormat("dd MMMM yyyy")}', 35),
                   rowItem(
                       "assets/icons/star_today_icon.png", ' نجم الإكليل', 35),
-                  rowItem("assets/icons/ecteran_icon.png",
-                      'لا يوجد اقتران اليوم', 35),
+                  ecteranText()
                 ],
               ),
             ),
-
-
             SizedBox(
               height: 40,
             ),
-
             InkWell(
               onTap: () {
                 To(context, EcteranScreen());
-
               },
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -187,16 +194,12 @@ class _CleandersState extends State<Cleanders> {
                 ),
               ),
             ),
-
             SizedBox(
               height: 40,
             ),
-
-
-
             InkWell(
               onTap: () {
-
+                To(context, all_najom());
               },
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),

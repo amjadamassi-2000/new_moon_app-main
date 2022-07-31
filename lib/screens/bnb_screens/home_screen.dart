@@ -282,42 +282,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
               ),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 15)
-                    .add(EdgeInsets.only(bottom: 10)),
-                child: Container(
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: Divider(
-                          color: Colors.grey,
-                          thickness: 1,
-                          indent: 20,
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 10),
-                        child: Text(
-                          " الإقتران الحالي",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16.sp,
-                            fontWeight: FontWeight.w500,
-                            fontFamily: "almarai",
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        child: Divider(
-                          color: Colors.grey,
-                          thickness: 1,
-                          endIndent: 20,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+
               Current_ecteran(),
               SizedBox(
                 height: 30.h,

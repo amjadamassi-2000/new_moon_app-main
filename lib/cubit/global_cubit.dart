@@ -12,6 +12,7 @@ import 'package:new_moon_app/weather/screens/loading_screen.dart';
 
 import '../components/global_componnets.dart';
 
+import '../flutter_qibla/qibla_main.dart';
 import '../screens/bnb_screens/qibla_screen.dart';
 import 'global_states.dart';
 
@@ -26,7 +27,7 @@ class GlobalCubit extends Cubit<GlobalStates> {
 
   List<Widget> screens = [
     HomeScreen(),
-    QiblaScreen(),
+    qibla_main(),
     LoadingScreen(),
     TimesPage(),
   ];
