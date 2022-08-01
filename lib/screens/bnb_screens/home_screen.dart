@@ -7,6 +7,7 @@ import 'package:new_moon_app/components/calendar.dart';
 import 'package:new_moon_app/components/const.dart';
 import 'package:new_moon_app/components/global_componnets.dart';
 import 'package:new_moon_app/data/grid_view_data.dart';
+import 'package:new_moon_app/items/Currency%20Converter.dart';
 import 'package:new_moon_app/items/current_ecteran.dart';
 import 'package:new_moon_app/items/current_fasl.dart';
 import 'package:new_moon_app/items/date_item.dart';
@@ -407,11 +408,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             child: HomeScreenItemFosool()),
                       ],
                     ),
-
-
                   ),
-
-
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: Row(
@@ -428,6 +425,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       ],
                     ),
                   ),
+                  Container(
+                      width: 150.w, height: 280, child: Currency_Converter()),
                 ],
               ),
 
