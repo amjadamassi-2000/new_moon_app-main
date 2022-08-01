@@ -17,6 +17,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../items/HomeScreenItemfosool.dart';
 import '../../items/HomeScreenItem_ekteran.dart';
+import '../../items/home_screen_item_links.dart';
 import '../fasoul.dart';
 import '../gregorian_calendar_screen.dart';
 
@@ -406,11 +407,27 @@ class _HomeScreenState extends State<HomeScreen> {
                             child: HomeScreenItemFosool()),
                       ],
                     ),
+
+
                   ),
-                  Container(
-                      width: 150.w,
-                      height: 280,
-                      child: HomeScreenItemEkteran()),
+
+
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                            width: 150.w,
+                            height: 280,
+                            child: HomeScreenItemEkteran()),
+                        Container(
+                            width: 150.w,
+                            height: 280,
+                            child: HomeScreenItemLinks()),
+                      ],
+                    ),
+                  ),
                 ],
               ),
 

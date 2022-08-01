@@ -65,8 +65,3 @@ class _EkteranItemState extends State<EkteranItem> {
   }
 }
 
-/*
- myRowItem("شهر  /" , "يناير "),
-    myRowItem("اليوم /" , "11 - يناير "),
-    myRowItem("اسم الإقتران /" , "الشتاء"),
- */

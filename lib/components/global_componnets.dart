@@ -1,30 +1,65 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-// import 'package:flutter_svg/flutter_svg.dart';
-// import 'package:flutter_screenutil/flutter_screenutil.dart';
-//
-//
-//
-//
-//
-//
-// Widget myTextButton(String title,  fun ,{double size})  =>
-//
-//     InkWell(
-//       onTap: fun,
-//       child: Text(title,
-//         style: TextStyle(
-//           fontSize: size == null ? 18.sp : size.sp ,
-//
-//         ),
-//       ),
-//     );
-//
+
 
 import 'package:flutter_svg/svg.dart';
 import 'package:intl/intl.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'const.dart';
+
+
+
+
+Widget myLinksRowItem(String title , Function function) =>
+
+    Padding(
+      padding: const EdgeInsets.only(bottom: 15),
+      child: InkWell(
+        onTap: function,
+        child: Container(
+          alignment: Alignment.centerRight,
+          height: 65,
+          width: double.infinity,
+          decoration: BoxDecoration(
+            color: item,
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child:  Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  title,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16.sp,
+                    fontWeight: FontWeight.w500,
+                    fontFamily: "almarai",
+                  ),
+                ),
+                Icon(Icons.arrow_forward_ios_sharp , color: Colors.white,),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 Widget rowItem(String icon , String date , double size) =>
@@ -390,7 +425,7 @@ Widget myRowItem(String title, String subTitle) => Padding(
             ),
           ),
           SizedBox(
-            width: 20,
+            width: 10,
           ),
           Text(
             subTitle,
