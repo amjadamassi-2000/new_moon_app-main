@@ -3,7 +3,7 @@ import 'dart:convert';
 
 const List<String> currenciesList = [
   'AUD',
-  'CAD',
+  'SAR',
   'CNY',
   'EUR',
   'GBP',

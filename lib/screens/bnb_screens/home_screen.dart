@@ -11,6 +11,7 @@ import 'package:new_moon_app/items/Currency%20Converter.dart';
 import 'package:new_moon_app/items/current_ecteran.dart';
 import 'package:new_moon_app/items/current_fasl.dart';
 import 'package:new_moon_app/items/date_item.dart';
+import 'package:new_moon_app/items/home%20date_converter.dart';
 import 'package:new_moon_app/items/home_screen_item.dart';
 import 'package:new_moon_app/screens/drawer_screen/admin_screen.dart';
 import 'package:new_moon_app/screens/drawer_screen/lock_admin_screen.dart';
@@ -425,8 +426,22 @@ class _HomeScreenState extends State<HomeScreen> {
                       ],
                     ),
                   ),
-                  Container(
-                      width: 150.w, height: 280, child: Currency_Converter()),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                            width: 150.w,
+                            height: 280,
+                            child: Currency_Converter()),
+                        Container(
+                            width: 150.w,
+                            height: 280,
+                            child: HomeScreendatewConverter()),
+                      ],
+                    ),
+                  ),
                 ],
               ),
 
