@@ -9,8 +9,9 @@ import 'package:new_moon_app/screens/najom.dart';
 class NajomGrid extends StatefulWidget {
   final id;
   final name;
+  final namenajom;
 
-  NajomGrid(this.id, this.name);
+  NajomGrid(this.id, this.name, this.namenajom);
 
   @override
   State<NajomGrid> createState() => _NajomGridState();
@@ -42,7 +43,7 @@ class _NajomGridState extends State<NajomGrid> {
           elevation: 0.0,
           centerTitle: true,
           title: Text(
-            "نجوم فصل ${widget.name}",
+            "نجوم فصل ${widget.namenajom}",
             style: TextStyle(
               color: Colors.white,
               fontSize: 16.sp,

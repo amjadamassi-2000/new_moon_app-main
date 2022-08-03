@@ -24,60 +24,60 @@ class _current_faslState extends State<current_fasl> {
       if (x3 >= 6 && x3 < 10) {
         if (x3 == 6 && x4 > 19) {
           return Myfasoul(
-              'الصيف', ' ١٩ يونيو', 'assets/images/summer_6.jpg', 7, 1, 92);
+              'الصيف', ' ١٩ يونيو', 'assets/images/summer_6.jpg', 7, 1, 92, '');
         }
         if (x3 == 7 || x3 == 8) {
           return Myfasoul(
-              'الصيف', ' ١٩ يونيو', 'assets/images/summer_6.jpg', 7, 1, 92);
+              'الصيف', ' ١٩ يونيو', 'assets/images/summer_6.jpg', 7, 1, 92, '');
         }
         if (x3 == 9 && x4 < 19) {
           return Myfasoul(
-              'الصيف', ' ١٩ يونيو', 'assets/images/summer_6.jpg', 7, 1, 92);
+              'الصيف', ' ١٩ يونيو', 'assets/images/summer_6.jpg', 7, 1, 92, '');
         }
       }
 
       if (x3 >= 9 && x3 < 1) {
         if (x3 == 9 && x4 > 19) {
           return Myfasoul(
-              'الخريف', ' ١٩ سبتمبر', 'assets/images/kraif.jpg', 7, 1, 92);
+              'الخريف', ' ١٩ سبتمبر', 'assets/images/kraif.jpg', 7, 1, 92, '');
         }
         if (x3 == 10 || x3 == 11) {
           return Myfasoul(
-              'الخريف', ' ١٩ سبتمبر', 'assets/images/kraif.jpg', 7, 1, 92);
+              'الخريف', ' ١٩ سبتمبر', 'assets/images/kraif.jpg', 7, 1, 92, '');
         }
         if (x3 == 12 && x4 < 19) {
           return Myfasoul(
-              'الخريف', ' ١٩ سبتمبر', 'assets/images/kraif.jpg', 7, 1, 92);
+              'الخريف', ' ١٩ سبتمبر', 'assets/images/kraif.jpg', 7, 1, 92, '');
         }
       }
 
       if (x3 >= 12 && x3 < 4) {
         if (x3 == 9 && x4 > 19) {
           return Myfasoul(
-              'الشتاء', ' ١٩ ديسمبر', 'assets/images/sitaa.jpeg', 7, 1, 92);
+              'الشتاء', ' ١٩ ديسمبر', 'assets/images/sitaa.jpeg', 7, 1, 92, '');
         }
         if (x3 == 1 || x3 == 2) {
           return Myfasoul(
-              'الشتاء', ' ١٩ ديسمبر', 'assets/images/sitaa.jpeg', 7, 1, 92);
+              'الشتاء', ' ١٩ ديسمبر', 'assets/images/sitaa.jpeg', 7, 1, 92, '');
         }
         if (x3 == 3 && x4 < 19) {
           return Myfasoul(
-              'الشتاء', ' ١٩ ديسمبر', 'assets/images/sitaa.jpeg', 7, 1, 92);
+              'الشتاء', ' ١٩ ديسمبر', 'assets/images/sitaa.jpeg', 7, 1, 92, '');
         }
       }
 
       if (x3 >= 3 && x3 < 7) {
         if (x3 == 3 && x4 > 19) {
           return Myfasoul(
-              'الربيع', ' ١٩ مارس', 'assets/images/rabie.jpeg', 7, 1, 92);
+              'الربيع', ' ١٩ مارس', 'assets/images/rabie.jpeg', 7, 1, 92, '');
         }
         if (x3 == 4 || x3 == 5) {
           return Myfasoul(
-              'الشتاء', ' ١٩ مارس', 'assets/images/rabie.jpeg', 7, 1, 92);
+              'الشتاء', ' ١٩ مارس', 'assets/images/rabie.jpeg', 7, 1, 92, '');
         }
         if (x3 == 6 && x4 < 19) {
           return Myfasoul(
-              'الشتاء', ' ١٩ مارس', 'assets/images/rabie.jpeg', 7, 1, 92);
+              'الشتاء', ' ١٩ مارس', 'assets/images/rabie.jpeg', 7, 1, 92, '');
         }
       } else {
         return null;

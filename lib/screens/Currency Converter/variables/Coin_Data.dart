@@ -7,7 +7,7 @@ const List<String> currenciesList = [
   'CNY',
   'EUR',
   'GBP',
-  'HKD',
+  'RUB',
   'JPY',
   'NZD',
   'SGD',

@@ -28,7 +28,10 @@ class _fasoul_itemState extends State<fasoul_item> {
     return SingleChildScrollView(
       child: InkWell(
         onTap: () {
-          To(context, NajomGrid(widget.myfasoul.id, widget.myfasoul.name));
+          To(
+              context,
+              NajomGrid(widget.myfasoul.id, widget.myfasoul.name,
+                  widget.myfasoul.namefornajom));
         },
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -53,7 +56,7 @@ class _fasoul_itemState extends State<fasoul_item> {
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 10),
                       child: Text(
-                        " فصل  ${widget.myfasoul.name}",
+                        "   ${widget.myfasoul.name}",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 16.sp,

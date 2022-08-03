@@ -6,7 +6,9 @@ import 'package:hijri/hijri_calendar.dart';
 import 'package:intl/intl.dart';
 import 'package:new_moon_app/cleandersScreen/hijri.dart';
 import 'package:new_moon_app/items/calenderidtem.dart';
+import 'package:new_moon_app/items/clock/views/home_view.dart';
 import 'package:new_moon_app/items/current_ecteran.dart';
+import 'package:new_moon_app/items/current_najm.dart';
 import 'package:new_moon_app/items/currentecterantext.dart';
 import 'package:new_moon_app/items/ekteran_item.dart';
 import 'package:new_moon_app/items/hijri.dart';
@@ -115,6 +117,15 @@ class _CleandersState extends State<Cleanders> {
               height: 40,
             ),
             Container(
+                width: 200.w,
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(50)),
+                height: 270.h,
+                child: HomeView()),
+            SizedBox(
+              height: 40,
+            ),
+            Container(
               height: 300,
               width: 300,
               decoration: BoxDecoration(
@@ -150,8 +161,7 @@ class _CleandersState extends State<Cleanders> {
                   rowItem("assets/icons/calendar.png", todayDate, 28),
                   rowItem("assets/icons/hijri_calender.png",
                       '${_today.toFormat("dd MMMM yyyy")}', 35),
-                  rowItem(
-                      "assets/icons/star_today_icon.png", ' نجم الإكليل', 35),
+                  current_najm(),
                   ecteranText()
                 ],
               ),
