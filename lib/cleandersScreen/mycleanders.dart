@@ -13,6 +13,7 @@ import 'package:new_moon_app/items/currentecterantext.dart';
 import 'package:new_moon_app/items/ekteran_item.dart';
 import 'package:new_moon_app/items/hijri.dart';
 import 'package:new_moon_app/screens/bnb_screens/all_najom.dart';
+import 'package:new_moon_app/screens/stars_image_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 
@@ -164,12 +165,11 @@ class _CleandersState extends State<Cleanders> {
                     rowItem("assets/icons/hijri_calender.png",
                         '${_today.toFormat("dd MMMM yyyy")}', 35),
                     current_najm(),
-
                     Padding(
-                      padding: const EdgeInsets.only(top: 10 , bottom: 20),
+                      padding: const EdgeInsets.only(top: 10, bottom: 20),
                       child: InkWell(
                         onTap: () {
-                          To(context, all_najom());
+                          To(context, StarsImageScreen());
                         },
                         child: Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -193,7 +193,6 @@ class _CleandersState extends State<Cleanders> {
                         ),
                       ),
                     ),
-
                     ecteranText(),
                   ],
                 ),
@@ -219,8 +218,8 @@ class _CleandersState extends State<Cleanders> {
                           color: Colors.white,
                           blurRadius: 1.0,
                           spreadRadius: 3.0,
-                          offset:
-                              Offset(2.0, 2.0), // shadow direction: bottom right
+                          offset: Offset(
+                              2.0, 2.0), // shadow direction: bottom right
                         )
                       ],
                     ),
@@ -257,8 +256,8 @@ class _CleandersState extends State<Cleanders> {
                           color: Colors.white,
                           blurRadius: 1.0,
                           spreadRadius: 3.0,
-                          offset:
-                              Offset(2.0, 2.0), // shadow direction: bottom right
+                          offset: Offset(
+                              2.0, 2.0), // shadow direction: bottom right
                         )
                       ],
                     ),
