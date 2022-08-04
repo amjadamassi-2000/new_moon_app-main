@@ -12,3 +12,10 @@ class Myfasoul {
   Myfasoul(this.name, this.date, this.image, this.najom, this.id, this.days,
       this.namefornajom);
 }
+
+class Myfasouldsec {
+  final String desc;
+  final int id;
+
+  Myfasouldsec(this.desc, this.id);
+}

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:new_moon_app/components/const.dart';
+import 'package:new_moon_app/data/fasouldata.dart';
 import 'package:new_moon_app/data/najomdata.dart';
 import 'package:new_moon_app/items/star_item.dart';
+import 'package:new_moon_app/model/fasoul.dart';
 import 'package:new_moon_app/model/najom.dart';
 import 'package:new_moon_app/screens/najom.dart';
 
@@ -19,11 +21,15 @@ class NajomGrid extends StatefulWidget {
 
 class _NajomGridState extends State<NajomGrid> {
   List<dynamic> mynajom;
-
+  Myfasouldsec myfasouldsec;
   getnajom() {
     mynajom = najom_data.where((element) {
       return element.id == widget.id;
     }).toList();
+  }
+
+  get_fasoul_desc() {
+    myfasouldsec = fasoul_desc.firstWhere((element) => element.id == widget.id);
   }
 
   @override
@@ -31,6 +37,7 @@ class _NajomGridState extends State<NajomGrid> {
     // TODO: implement initState
     super.initState();
     getnajom();
+    get_fasoul_desc();
   }
 
   @override
@@ -56,9 +63,6 @@ class _NajomGridState extends State<NajomGrid> {
 
         body: Column(
           children: [
-            SizedBox(
-              height: 50,
-            ),
             Text(
               " يمكث كُل نجم فترة زمنية تُقدر بثلاثة عشر يوم عدا الجبهة اربعة عشر يوماً",
               style: TextStyle(
@@ -69,7 +73,29 @@ class _NajomGridState extends State<NajomGrid> {
               ),
             ),
             SizedBox(
-              height: 50,
+              height: 10.h,
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10),
+              child: Container(
+                height: 150.h,
+                width: double.infinity,
+                decoration: BoxDecoration(color: Colors.black),
+                child: Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: SingleChildScrollView(
+                    child: Container(
+                      child: Text(
+                        '${myfasouldsec.desc.toString()}',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 10.h,
             ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 10),
