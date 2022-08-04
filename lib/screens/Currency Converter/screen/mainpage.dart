@@ -13,36 +13,34 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 30.0),
-              child: Text(
-                'Currency Converter',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                ),
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 30.0),
+            child: Text(
+              'Currency Converter',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 20,
               ),
             ),
-            ReusableCard(cardChild: ConvertedCurrency()),
-            SizedBox(
-              height: 15,
-            ),
-            ReusableCard(cardChild: ExchangeRate()),
-            SizedBox(
-              height: 15,
-            ),
-            ReusableCard(cardChild: ConversionList()),
-            SizedBox(
-              height: 30,
-            ),
-          ],
-        ),
+          ),
+          ReusableCard(cardChild: ConvertedCurrency()),
+          SizedBox(
+            height: 15,
+          ),
+          ReusableCard(cardChild: ExchangeRate()),
+          SizedBox(
+            height: 15,
+          ),
+          ReusableCard(cardChild: ConversionList()),
+          SizedBox(
+            height: 200,
+          ),
+        ],
       ),
     );
   }

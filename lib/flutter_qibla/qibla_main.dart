@@ -34,6 +34,8 @@ class _qibla_mainState extends State<qibla_main> {
           ),
         ),
       ),
+
+
       body: FutureBuilder(
         future: _deviceSupport,
         builder: (_, AsyncSnapshot<bool> snapshot) {
@@ -45,7 +47,19 @@ class _qibla_mainState extends State<qibla_main> {
             );
 
           if (snapshot.data)
-            return QiblahCompass();
+            return Stack(
+              children: [
+                QiblahCompass(),
+
+                Padding(
+                  padding:  EdgeInsets.only(
+                      right: MediaQuery.of(context).size.width /2.8,
+                    top: 20
+                  ),
+                  child: Image.asset("assets/icons/north_arrow.png" , width: 110, color: Color(0xff8B1000),),
+                ),
+              ],
+            );
           else
             return QiblahCompass();
         },
