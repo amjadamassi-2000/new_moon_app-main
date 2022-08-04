@@ -19,6 +19,7 @@ import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 import '../components/const.dart';
 import '../components/global_componnets.dart';
 import '../screens/ekteran_screen.dart';
+import '../screens/stars_image_screen.dart';
 
 class Cleanders extends StatefulWidget {
   @override
@@ -169,7 +170,7 @@ class _CleandersState extends State<Cleanders> {
                       padding: const EdgeInsets.only(top: 10 , bottom: 20),
                       child: InkWell(
                         onTap: () {
-                          To(context, all_najom());
+                          To(context,StarsImageScreen());
                         },
                         child: Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 20),
